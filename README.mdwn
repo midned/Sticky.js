@@ -11,24 +11,18 @@ It's really simple *you won't see any $() here*
 
 // You don't need me to say that you should have some html for the demo and include the script, do you?
 
-var aside = document.getElementsByTagname('aside');
+var aside = document.getElementsByTagName('aside');
+// You can use any other native selector, like getElementById, querySelector, etc.
 
 new Sticky(aside, {
-
 	//spacing: 5, // margin (in pixels) with the top of the viewport
-
+	
 	stick: function(){
-
 		console.log("It's following you now");
-
 	},
-
 	unstick: function() {
-
 		console.log('Back to normal');
-
 	}
-
 });
 
 ```
