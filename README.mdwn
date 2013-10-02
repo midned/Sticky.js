@@ -1,0 +1,34 @@
+Sticky.js
+-------------
+
+Stick elements to the viewport, being able to change its behavior after and before it sticks
+
+## Usage
+
+It's really simple *you won't see any $() here*
+
+```javascript
+
+// You don't need me to say that you should have some html for the demo and include the script, do you?
+
+var aside = document.getElementsByTagname('aside');
+
+new Sticky(aside, {
+
+	//spacing: 5, // margin (in pixels) with the top of the viewport
+
+	stick: function(){
+
+		console.log("It's following you now");
+
+	},
+
+	unstick: function() {
+
+		console.log('Back to normal');
+
+	}
+
+});
+
+```
