@@ -17,7 +17,10 @@
 
 		sticky.sticked = [];
 
-		this.options = options || {};
+		this.options = {};
+		for (var n in options) {
+			this.options[n] = options[n];
+		}
 
 		var new_stick;
 
