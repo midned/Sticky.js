@@ -40,7 +40,7 @@
 				var element = sticky.sticked[i], y = window.scrollY + (sticky.options['margin']||0);
 
 
-				if (y >= element.top && ! element.sticked) {
+				if (y >= element.top-(sticky.options['margin']||0) && ! element.sticked) {
 
 					element.node.style.width = element.rect.width+'px';
 					element.node.style.position = 'fixed';
@@ -54,7 +54,7 @@
 					element.sticked = true;
 
 				}
-				else if (y < element.top && element.sticked) {
+				else if (y < element.top-(sticky.options['margin']||0) && element.sticked) {
 					element.node.style.position = 'static';
 					element.node.style.top = 'auto';
 
