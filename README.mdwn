@@ -15,8 +15,8 @@ var aside = document.getElementsByTagName('aside');
 // You can use any other native selector, like getElementById, querySelector, etc.
 
 new Sticky(aside, {
-	//spacing: 5, // margin (in pixels) with the top of the viewport
-	
+	//margin: 5, // margin (in pixels) with the top of the viewport
+
 	stick: function(){
 		console.log("It's following you now");
 	},

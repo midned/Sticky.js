@@ -31,14 +31,14 @@
 
 		window.addEventListener('scroll', function() {
 			for (var i = 0; i < sticky.sticked.length; i++) {
-				var element = sticky.sticked[i], y = window.scrollY + (sticky.options['spacing']||0);
+				var element = sticky.sticked[i], y = window.scrollY + (sticky.options['margin']||0);
 
 
 				if (y >= element.rect.top && ! element.sticked) {
 
 					element.node.style.width = element.rect.width+'px';
 					element.node.style.position = 'fixed';
-					element.node.style.top = 0+(sticky.options['spacing']||0)+'px';
+					element.node.style.top = 0+(sticky.options['margin']||0)+'px';
 					element.node.style.left = 0+(element.rect.left)+'px';
 
 					if (sticky.options.stick) {
